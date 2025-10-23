@@ -24,12 +24,12 @@ jobs:
     
       test:
         runs-on: ubuntu-latest
-        needs: compilar
+        #needs: compilar
         steps:
           - run: echo "🧪 Ejecutando pruebas..."
     
       deploy:
         runs-on: ubuntu-latest
-        needs: [test]
+        #needs: [test]
         steps:
           - run: echo "🚀 Deploy listo!"
