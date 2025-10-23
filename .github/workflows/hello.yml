@@ -29,3 +29,7 @@ jobs:
     needs: [test]
     steps:
       - run: echo "🚀 Deploy listo!"
+
+      - name: If develop branch
+        if: github.ref == 'refs/heads/develop'
+        run: echo "This is the develop branch!"
